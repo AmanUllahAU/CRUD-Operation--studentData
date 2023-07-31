@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+
+    <h1>Student Data :</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Full name</label>
+                            <input type="text" name="Full name" id="fullName">
+                        </div>
+
+                        <div>
+                            <label>Father name</label>
+                            <input type="text" name="Father name" id="fatherName">
+                        </div>
+
+                        <div>
+                            <label>Roll number</label>
+                            <input type="text" name="Roll number" id="rollNumber">
+                        </div>
+
+
+                        <div>
+                            <select name="subject" id="subject">
+                                <option value="" hidden>Select Subject</option>
+                                <option value="Web & Mobile App">Web & Mobile App</option>
+                                <option value="AI">AI</option>
+                                <option value="Blockchain">Blockchain</option>
+                            </select><br>
+                        </div>
+
+
+                        <div>
+                            <select name="classTiming" id="classTiming">
+                                <option value="" hidden>Select Days</option>
+                                <option value="Weekdays">Weekdays</option>
+                                <option value="Weekend">Weekend</option>
+                            </select><br>
+                        </div>
+
+
+
+
+
+                        <button onclick="" id="button">Register</button>
+
+                    </form>
+
+                </td>
+
+
+
+
+                <td>
+                    <table class="list" id="employeeList">
+                        <thead>
+                            <tr>
+                                <th>Fullname</th>
+                                <th>F.name</th>
+                                <th>Roll no.</th>
+                                <th>Subject</th>
+                                <th>C.timing</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script src="script.js"></script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCGOKd2Ky1h4lp7KUpTmaY8FHoklDSkdYI",
+          authDomain: "frist-demo-61c5b.firebaseapp.com",
+          projectId: "frist-demo-61c5b",
+          storageBucket: "frist-demo-61c5b.appspot.com",
+          messagingSenderId: "791238143581",
+          appId: "1:791238143581:web:ea1ddfa3504bc4493427b4",
+          measurementId: "G-1B53DEEV5X"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
+
+</html>
